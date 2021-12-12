@@ -1,0 +1,42 @@
+[package]
+default-run = "neptune"
+edition = "2021"
+name = "eptune"
+version = "0.1.0"
+[[bin]]
+name = "build_snapshot"
+path = "src/build_snapshot.rs"
+
+[[bin]]
+name = "neptune"
+path = "src/main.rs"
+
+[dependencies]
+atty = "*"
+deno_console = "0.28"
+deno_core = "0.110"
+deno_timers = "0.26"
+deno_url = "0.28"
+deno_web = "0.59"
+deno_webidl = "0.28"
+futures = "*"
+lazy_static = "*"
+log = "*"
+platforms = "2.0.0"
+rustyline = "*"
+serde = "*"
+serde_json = "*"
+sysinfo = "*"
+termcolor = "*"
+
+[dependencies.tokio]
+features = ["full"]
+version = "1"
+
+[dependencies.winapi]
+features = ["tlhelp32", "winuser"]
+version = "*"
+
+[profile]
+[profile.release]
+lto = true
