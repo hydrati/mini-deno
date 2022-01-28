@@ -10,8 +10,7 @@ use deno_core::error::type_error;
 use std::collections::HashMap;
 use crate::permissions::Permissions;
 
-use sysinfo::{System, SystemExt, ProcessorExt, Processor};
-use sysinfo::AsU32;
+use sysinfo::{System, SystemExt, ProcessorExt, Processor, PidExt};
 use platforms::{TARGET_ARCH, TARGET_ENV, TARGET_OS};
 use serde::Serialize;
 use std::env;
